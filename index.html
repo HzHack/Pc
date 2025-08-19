@@ -1,148 +1,441 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>فحص قوة جهازك للقيمنق - أبو عساف</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       background: #0a0a0a;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin: 0;
+      padding: 20px;
       text-align: center;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(50, 50, 150, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(150, 50, 50, 0.2) 0%, transparent 40%);
     }
+    
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
     h1 {
       font-size: 2.5rem;
       background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: rgbText 5s infinite linear;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
+    
     @keyframes rgbText {
       0% { filter: hue-rotate(0deg); }
       100% { filter: hue-rotate(360deg); }
     }
+    
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(20, 20, 30, 0.8);
       border-radius: 20px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-      width: 90%;
-      max-width: 600px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(0, 150, 255, 0.4);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(100, 100, 255, 0.2);
     }
-    select, button {
+    
+    .specs-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .specs-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .spec-group {
+      text-align: right;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #4fd1c5;
+      font-size: 1.1rem;
+    }
+    
+    select {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 12px 15px;
+      margin-bottom: 15px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 1px solid rgba(100, 100, 255, 0.3);
     }
+    
+    select:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+    }
+    
+    select:focus {
+      outline: none;
+      box-shadow: 0 0 15px rgba(100, 200, 255, 0.8);
+    }
+    
+    select option {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 10px;
+    }
+    
+    select optgroup {
+      background: #16213e;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+    
+    .cooling-options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    
+    .cooling-option {
+      flex: 1;
+      margin: 0 5px;
+      text-align: center;
+    }
+    
+    .cooling-option input {
+      display: none;
+    }
+    
+    .cooling-option label {
+      display: block;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    
+    .cooling-option input:checked + label {
+      background: rgba(0, 150, 255, 0.3);
+      border-color: #0096ff;
+      box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+    }
+    
+    .cooling-option label:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
     button {
+      width: 100%;
+      padding: 15px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2rem;
       background: linear-gradient(90deg, #ff00ff, #00ffff);
       color: #000;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
     }
+    
     button:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
     }
+    
+    button:active {
+      transform: scale(0.98);
+    }
+    
     .result {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 1.3rem;
       font-weight: bold;
-      padding: 15px;
+      padding: 20px;
       border-radius: 15px;
       animation: glow 2s infinite alternate;
+      line-height: 1.6;
     }
+    
     @keyframes glow {
-      from { box-shadow: 0 0 10px #00ffff; }
-      to { box-shadow: 0 0 20px #ff00ff; }
+      from { box-shadow: 0 0 15px #00ffff; }
+      to { box-shadow: 0 0 25px #ff00ff; }
     }
+    
+    .games {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+    }
+    
     footer {
       margin-top: 30px;
       font-size: 0.9rem;
       color: #888;
+      padding: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
     }
-    .games {
-      margin-top: 15px;
-      text-align: right;
-      font-size: 1rem;
-      line-height: 1.6;
+    
+    .performance-bar {
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    
+    .performance-fill {
+      height: 100%;
+      border-radius: 10px;
+      transition: width 1s ease-in-out;
     }
   </style>
 </head>
 <body>
-  <h1>💻 فحص جهازك للقيمنق - أبو عساف 💻</h1>  <div class="card">
-    <label>المعالج (CPU):</label>
-    <select id="cpu">
-      <option value="ضعيف">Intel Pentium / Athlon</option>
-      <option value="ضعيف">Intel i3 4th Gen / Ryzen 3 1200</option>
-      <option value="متوسط">Intel i5 6th-9th Gen / Ryzen 5 2600</option>
-      <option value="قوي">Intel i7 10th-12th Gen / Ryzen 7 5800X</option>
-      <option value="خارقق">Intel i9 13th Gen / Ryzen 9 7950X</option>
-    </select><label>كرت الشاشة (GPU):</label>
-<select id="gpu">
-  <option value="ضعيف">GT 1030 / RX 550</option>
-  <option value="ضعيف">GTX 750 Ti / GTX 950</option>
-  <option value="متوسط">GTX 1060 / RX 580</option>
-  <option value="متوسط">GTX 1660 Super / RX 5600 XT</option>
-  <option value="قوي">RTX 2060 / RTX 3060 / RX 6700 XT</option>
-  <option value="قوي">RTX 3070 / RX 6800</option>
-  <option value="خارقق">RTX 4080 / RX 7900 XT</option>
-  <option value="خارقق">RTX 4090 / RX 7900 XTX</option>
-</select>
+  <div class="container">
+    <h1>💻 فحص جهازك للقيمنق - أبو عساف 💻</h1>
+    
+    <div class="card">
+      <div class="specs-container">
+        <div class="spec-group">
+          <label>المعالج (CPU):</label>
+          <select id="cpu">
+            <option value="" selected disabled>-- اختر المعالج --</option>
+            <optgroup label="Intel">
+              <option value="ضعيف">Intel Pentium</option>
+              <option value="ضعيف">Intel i3 4th Gen</option>
+              <option value="متوسط">Intel i5 6th-9th Gen</option>
+              <option value="قوي">Intel i7 10th-12th Gen</option>
+              <option value="قوي جدا">Intel i7 13th-14th Gen</option>
+              <option value="خارق">Intel i9 12th-13th Gen</option>
+              <option value="خارق جدا">Intel i9 14th Gen</option>
+            </optgroup>
+            <optgroup label="AMD">
+              <option value="ضعيف">Athlon</option>
+              <option value="ضعيف">Ryzen 3 1200</option>
+              <option value="متوسط">Ryzen 5 2600</option>
+              <option value="قوي">Ryzen 5 5600X</option>
+              <option value="قوي جدا">Ryzen 7 5800X</option>
+              <option value="خارق">Ryzen 7 7800X3D</option>
+              <option value="خارق جدا">Ryzen 9 7950X</option>
+            </optgroup>
+          </select>
+        </div>
+        
+        <div class="spec-group">
+          <label>الرام (RAM):</label>
+          <select id="ram">
+            <option value="" selected disabled>-- اختر كمية الذاكرة --</option>
+            <option value="ضعيف">4GB DDR3</option>
+            <option value="ضعيف">8GB DDR3</option>
+            <option value="متوسط">8GB DDR4</option>
+            <option value="قوي">16GB DDR4</option>
+            <option value="قوي جدا">16GB DDR5</option>
+            <option value="خارق">32GB DDR4</option>
+            <option value="خارق جدا">32GB DDR5</option>
+            <option value="خارق جدا">64GB DDR5</option>
+          </select>
+        </div>
+      </div>
+      
+      <label>كرت الشاشة (GPU):</label>
+      <select id="gpu">
+        <option value="" selected disabled>-- اختر كرت الشاشة --</option>
+        <optgroup label="NVIDIA GeForce">
+          <option value="ضعيف">GT 1030</option>
+          <option value="ضعيف">GTX 1050</option>
+          <option value="ضعيف">GTX 1050 Ti</option>
+          <option value="ضعيف">GTX 1650</option>
+          <option value="متوسط">GTX 1060</option>
+          <option value="متوسط">GTX 1660</option>
+          <option value="متوسط">GTX 1660 Super</option>
+          <option value="متوسط">GTX 1660 Ti</option>
+          <option value="قوي">RTX 2060</option>
+          <option value="قوي">RTX 2060 Super</option>
+          <option value="قوي جدا">RTX 3060</option>
+          <option value="قوي جدا">RTX 3060 Ti</option>
+          <option value="خارق">RTX 3070</option>
+          <option value="خارق">RTX 3070 Ti</option>
+          <option value="خارق">RTX 3080</option>
+          <option value="خارق جدا">RTX 3080 Ti</option>
+          <option value="خارق جدا">RTX 3090</option>
+          <option value="خارق جدا">RTX 3090 Ti</option>
+          <option value="خارق جدا">RTX 4070</option>
+          <option value="خارق جدا">RTX 4070 Super</option>
+          <option value="خارق جدا">RTX 4070 Ti</option>
+          <option value="خارق جدا">RTX 4070 Ti Super</option>
+          <option value="خارق جدا">RTX 4080</option>
+          <option value="خارق جدا">RTX 4080 Super</option>
+          <option value="خارق جدا">RTX 4090</option>
+          <option value="خارق جدا">RTX 5090 (قريباً)</option>
+        </optgroup>
+        <optgroup label="AMD Radeon">
+          <option value="ضعيف">RX 550</option>
+          <option value="ضعيف">RX 560</option>
+          <option value="ضعيف">RX 570</option>
+          <option value="متوسط">RX 580</option>
+          <option value="متوسط">RX 5500 XT</option>
+          <option value="متوسط">RX 5600 XT</option>
+          <option value="قوي">RX 5700 XT</option>
+          <option value="قوي">RX 6600</option>
+          <option value="قوي جدا">RX 6600 XT</option>
+          <option value="قوي جدا">RX 6700 XT</option>
+          <option value="خارق">RX 6800</option>
+          <option value="خارق">RX 6800 XT</option>
+          <option value="خارق جدا">RX 6900 XT</option>
+          <option value="خارق جدا">RX 6950 XT</option>
+          <option value="خارق جدا">RX 7600</option>
+          <option value="خارق جدا">RX 7700 XT</option>
+          <option value="خارق جدا">RX 7800 XT</option>
+          <option value="خارق جدا">RX 7900 XT</option>
+          <option value="خارق جدا">RX 7900 XTX</option>
+        </optgroup>
+      </select>
+      
+      <label>نوع التبريد:</label>
+      <div class="cooling-options">
+        <div class="cooling-option">
+          <input type="radio" id="air-cooling" name="cooling" value="هوائي">
+          <label for="air-cooling">تبريد هوائي</label>
+        </div>
+        <div class="cooling-option">
+          <input type="radio" id="liquid-cooling" name="cooling" value="مائي">
+          <label for="liquid-cooling">تبريد مائي</label>
+        </div>
+      </div>
+      
+      <button onclick="checkPerformance()">🚀 افحص جهازي 🚀</button>
+      
+      <div class="performance-bar">
+        <div id="performance-fill" class="performance-fill" style="width: 0%; background: linear-gradient(90deg, #ff0000, #00ff00);"></div>
+      </div>
+      
+      <div id="result" class="result"></div>
+      <div id="games" class="games"></div>
+    </div>
+    
+    <footer>
+      ⚡ تصميم وبرمجة: أبو عساف ⚡
+    </footer>
+  </div>
 
-<label>الرام (RAM):</label>
-<select id="ram">
-  <option value="ضعيف">4GB DDR3</option>
-  <option value="متوسط">8GB DDR4</option>
-  <option value="قوي">16GB DDR4/DDR5</option>
-  <option value="خارقق">32GB أو أكثر DDR5</option>
-</select>
-
-<button onclick="checkPerformance()">🚀 افحص جهازي 🚀</button>
-<div id="result" class="result"></div>
-<div id="games" class="games"></div>
-
-  </div>  <footer>
-    ⚡ تصميم وبرمجة: أبو عساف ⚡
-  </footer>  <script>
+  <script>
     function checkPerformance() {
       let cpu = document.getElementById("cpu").value;
       let gpu = document.getElementById("gpu").value;
       let ram = document.getElementById("ram").value;
+      
+      // الحصول على نوع التبريد
+      let coolingType = document.querySelector('input[name="cooling"]:checked');
+      let cooling = coolingType ? coolingType.value : "هوائي";
+      
+      // التحقق من أن المستخدم اختار جميع الخيارات
+      if (!cpu || !gpu || !ram || !coolingType) {
+        alert("يرجى اختيار جميع المكونات ونوع التبريد أولاً!");
+        return;
+      }
 
-      let values = { ضعيف: 1, متوسط: 2, قوي: 3, خارقق: 4 };
+      let values = { 
+        "ضعيف": 1, 
+        "متوسط": 2, 
+        "قوي": 3, 
+        "قوي جدا": 4, 
+        "خارق": 5, 
+        "خارق جدا": 6 
+      };
+      
       let total = values[cpu] + values[gpu] + values[ram];
-
+      
+      // إضافة نقطة إضافية إذا كان التبريد مائي
+      if (cooling === "مائي") {
+        total += 1;
+      }
+      
       let result = document.getElementById("result");
       let games = document.getElementById("games");
+      let performanceFill = document.getElementById("performance-fill");
+      
       games.innerHTML = "";
+      
+      // حساب النسبة المئوية للأداء
+      let maxTotal = 18; // أقصى قيمة ممكنة (6+6+6)
+      let performancePercent = (total / maxTotal) * 100;
+      
+      // تحديث شريط الأداء
+      performanceFill.style.width = performancePercent + "%";
+      
+      // تحديد لون شريط الأداء بناء على النسبة
+      if (performancePercent < 30) {
+        performanceFill.style.background = "linear-gradient(90deg, #ff0000, #ff4500)";
+      } else if (performancePercent < 60) {
+        performanceFill.style.background = "linear-gradient(90deg, #ff4500, #ffa500)";
+      } else if (performancePercent < 80) {
+        performanceFill.style.background = "linear-gradient(90deg, #ffa500, #9acd32)";
+      } else {
+        performanceFill.style.background = "linear-gradient(90deg, #9acd32, #00ff00)";
+      }
 
       if (total <= 5) {
         result.style.background = "rgba(255,0,0,0.3)";
         result.innerHTML = "🔥 جهازك ضعيف للألعاب الحديثة! 🔥<br>نصيحة: طور كرت الشاشة وزود الرام على الأقل 16GB";
-      } else if (total <= 7) {
+        games.innerHTML = "✅ الألعاب المدعومة: الألعاب القديمة وبعض الألعاب الخفيفة على إعدادات منخفضة";
+      } else if (total <= 8) {
         result.style.background = "rgba(255,165,0,0.3)";
         result.innerHTML = "⚡ جهازك متوسط، يشغل أغلب الألعاب بجودة متوسطة. ⚡<br>نصيحة: فكر في ترقية المعالج أو GPU";
-        games.innerHTML = "✅ الألعاب المدعومة: GTA V, Fortnite, CS:GO (جودة متوسطة)";
-      } else if (total <= 9) {
+        games.innerHTML = "✅ الألعاب المدعومة: GTA V, Fortnite, CS:GO, Valorant (جودة متوسطة)";
+      } else if (total <= 12) {
         result.style.background = "rgba(0,255,0,0.3)";
         result.innerHTML = "✅ جهازك قوي ويشغل الألعاب بجودة عالية ✅<br>نصيحة: لا تحتاج ترقية حالياً إلا إذا تبي 4K/VR";
         games.innerHTML = "✅ الألعاب المدعومة: GTA V, Warzone, Apex, Cyberpunk 2077 (1080p/1440p)";
+      } else if (total <= 16) {
+        result.style.background = "rgba(0,150,255,0.3)";
+        result.innerHTML = "🚀 جهازك خارق، جاهز لأي لعبة على Ultra Settings و 2K/4K! 🚀";
+        games.innerHTML = "🔥 الألعاب المدعومة: جميع الألعاب الحديثة مثل Cyberpunk 2077, Starfield, Warzone على إعدادات عالية";
       } else {
-        result.style.background = "rgba(0,255,255,0.3)";
-        result.innerHTML = "🚀 جهازك خارق، جاهز لأي لعبة على Ultra Settings و 4K/8K! 🚀";
-        games.innerHTML = "🔥 الألعاب المدعومة: جميع الألعاب الحديثة مثل Cyberpunk 2077, Starfield, Warzone على أعلى إعدادات";
+        result.style.background = "rgba(148,0,211,0.3)";
+        result.innerHTML = "💎 جهازك خارق جداً، جاهز لأي لعبة على Ultra Settings و 4K/8K مع Ray Tracing! 💎";
+        games.innerHTML = "🔥 الألعاب المدعومة: جميع الألعاب الحديثة والمعقدة على أعلى إعدادات مع Ray Tracing و 4K";
       }
+      
+      // إضافة معلومات عن التبريد
+      result.innerHTML += `<br>نوع التبريد: ${cooling} ${cooling === "مائي" ? "❄️" : "💨"}`;
     }
-  </script></body>
+  </script>
+</body>
 </html>
