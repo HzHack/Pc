@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فحص أداء جهازك للألعاب - اللهجة السعودية</title>
+    <title>افحص أداء جهازك للألعاب</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background: linear-gradient(135deg, #0c1e3e, #1a3a5f, #0a2d4e);
-            color: #fff;
+            background: linear-gradient(135deg, rgb(12, 30, 62), rgb(26, 58, 95), rgb(10, 45, 78));
+            color: rgb(255, 255, 255);
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -35,17 +35,17 @@
         }
         
         header {
-            background: linear-gradient(90deg, #0c4a6e, #0a3a5a);
+            background: linear-gradient(90deg, rgb(12, 74, 110), rgb(10, 58, 90));
             padding: 25px 30px;
             text-align: center;
             position: relative;
-            border-bottom: 2px solid #38bdf8;
+            border-bottom: 2px solid rgb(56, 189, 248);
         }
         
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #38bdf8;
+            color: rgb(56, 189, 248);
             text-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
         }
         
@@ -78,7 +78,7 @@
         }
         
         h2 {
-            color: #38bdf8;
+            color: rgb(56, 189, 248);
             margin-bottom: 20px;
             font-size: 1.8rem;
             display: flex;
@@ -92,31 +92,31 @@
             background: rgba(15, 23, 42, 0.6);
             padding: 15px;
             border-radius: 12px;
-            border: 1px solid #334155;
+            border: 1px solid rgb(51, 65, 85);
         }
         
         label {
             display: block;
             margin-bottom: 10px;
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: rgb(203, 213, 225);
             font-weight: bold;
         }
         
         select {
             width: 100%;
             padding: 12px 15px;
-            background: #1e293b;
-            border: 2px solid #334155;
+            background: rgb(30, 41, 59);
+            border: 2px solid rgb(51, 65, 85);
             border-radius: 10px;
-            color: #f8fafc;
+            color: rgb(248, 250, 252);
             font-size: 1rem;
             outline: none;
             transition: all 0.3s ease;
         }
         
         select:focus {
-            border-color: #38bdf8;
+            border-color: rgb(56, 189, 248);
             box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
         }
         
@@ -141,7 +141,8 @@
             border-radius: 15px;
             margin-top: 15px;
             min-height: 250px;
-            border: 1px solid #334155;
+            border: 1px solid rgb(51, 65, 85);
+            position: relative;
         }
         
         .performance-level {
@@ -156,7 +157,7 @@
             line-height: 1.7;
             margin-bottom: 20px;
             max-width: 90%;
-            color: #e2e8f0;
+            color: rgb(226, 232, 240);
         }
         
         .advice-container {
@@ -164,12 +165,12 @@
             border-radius: 12px;
             padding: 20px;
             margin-top: 15px;
-            border-left: 4px solid #38bdf8;
+            border-left: 4px solid rgb(56, 189, 248);
             display: none;
         }
         
         .advice-title {
-            color: #38bdf8;
+            color: rgb(56, 189, 248);
             font-size: 1.3rem;
             margin-bottom: 12px;
             display: flex;
@@ -187,11 +188,11 @@
             background: rgba(56, 189, 248, 0.1);
             padding: 10px;
             border-radius: 8px;
-            border-right: 3px solid #38bdf8;
+            border-right: 3px solid rgb(56, 189, 248);
         }
         
         .btn {
-            background: linear-gradient(90deg, #0ea5e9, #0284c7);
+            background: linear-gradient(90deg, rgb(14, 165, 233), rgb(2, 132, 199));
             color: white;
             border: none;
             padding: 15px 25px;
@@ -210,7 +211,7 @@
         }
         
         .btn:hover {
-            background: linear-gradient(90deg, #0284c7, #0369a1);
+            background: linear-gradient(90deg, rgb(2, 132, 199), rgb(3, 105, 161));
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(2, 132, 199, 0.7);
         }
@@ -224,20 +225,23 @@
             padding: 20px;
             text-align: center;
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: rgb(148, 163, 184);
             border-top: 1px solid rgba(56, 189, 248, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
         
-        .level-weak { color: #f87171; }
-        .level-medium { color: #fbbf24; }
-        .level-good { color: #4ade80; }
-        .level-excellent { color: #60a5fa; }
-        .level-ultimate { color: #c084fc; }
+        .level-weak { color: rgb(248, 113, 113); }
+        .level-medium { color: rgb(251, 191, 36); }
+        .level-good { color: rgb(74, 222, 128); }
+        .level-excellent { color: rgb(96, 165, 250); }
+        .level-ultimate { color: rgb(192, 132, 252); }
         
         .icon {
             font-size: 1.4rem;
             vertical-align: middle;
-            color: #38bdf8;
+            color: rgb(56, 189, 248);
         }
         
         .saudi-flag {
@@ -255,8 +259,40 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 15px;
-            color: #38bdf8;
+            color: rgb(56, 189, 248);
             font-size: 1.2rem;
+        }
+        
+        .scan-notification {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.85);
+            color: rgb(56, 189, 248);
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+            display: none;
+            animation: fadeInOut 2s ease;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+            40% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
+        }
+        
+        .developer-credit {
+            color: rgb(56, 189, 248);
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -295,7 +331,7 @@
                         <option value="medium">Ryzen 5 (سلسلة 3000-5000)</option>
                         <option value="good" selected>Ryzen 7 (سلسلة 5000-7000)</option>
                         <option value="excellent">Ryzen 9 (سلسلة 5000-7000)</option>
-                        <option value="ultimate">Ryzen 9 (سلسلة 7000+ مع X3D)</option>
+                        <option value="ultimate">Ryzen 9 7950X3D (سلسلة 7000)</option>
                     </select>
                 </div>
                 
@@ -361,6 +397,7 @@
                 <h2><i class="fas fa-chart-line"></i> نتيجة الفحص</h2>
                 
                 <div class="result-container">
+                    <div class="scan-notification" id="scan-notification">تم الفحص!</div>
                     <div class="performance-level">سوي الفحص وشف حالك</div>
                     <div class="performance-description">اختار مواصفات سستمك فوق، واضغط على "يلا شغل الفحص" عشان نقيم لك أداء الجهاز ونقولك وش تحتاج تسوي عشان تقوى اللعب عندك</div>
                 </div>
@@ -376,11 +413,19 @@
         
         <footer>
             <p>© 2023 فحص أداء جهازك للألعاب - باللهجة السعودية | خلنا نعرفك قد ايش سستمك قوي <span class="saudi-flag"></span></p>
+            <p class="developer-credit">تم التطوير بواسطة ابو عساف</p>
         </footer>
     </div>
 
     <script>
         document.getElementById('check-btn').addEventListener('click', function() {
+            const btn = this;
+            const originalBtnText = btn.innerHTML;
+            
+            // عرض رسالة "جار الفحص..."
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الفحص...';
+            btn.disabled = true;
+            
             // الحصول على القيم المختارة
             const cpuIntel = document.getElementById('cpu-intel').value;
             const cpuRyzen = document.getElementById('cpu-ryzen').value;
@@ -433,20 +478,28 @@
             // إنشاء النصائح باللهجة السعودية
             if (cpu === 'weak') {
                 adviceList.push('ترقية البروسيسور: البروسيسور الحالي قديم شوي، لو تبي تحسن الأداء شوف لك i5 الجديد أو Ryzen 5.');
+            } else if (cpu === 'ultimate') {
+                adviceList.push('ما يحتاج تروح فوق ذا البروسيسور، الـ Ryzen 9 7950X3D من أقوى المعالجات للألعاب حالياً.');
             }
             
             if (gpu === 'weak') {
                 adviceList.push('ترقية كرت الشاشة: الكرت عندك قديم، لو تبي تلعب ألعاب حديثة لازم تشتري كرت أقوى زي RTX 3060 أو RX 6700.');
             } else if (gpu === 'medium') {
                 adviceList.push('لو تبي تحسن كرت الشاشة: كرتك كويس لكن لو ودك أعلى إعدادات شوف لك RTX 4070 أو RX 7800.');
+            } else if (gpu === 'ultimate') {
+                adviceList.push('كرت الشاشة عندك من الأقوى بالسوق، ما يحتاج ترقية إلا بعد سنتين أو ثلاثة.');
             }
             
             if (ram === 'weak') {
                 adviceList.push('زيادة الرامات: 8GB قليلة مرة للألعاب الحديثة، لازم تزودها لـ 16GB عالأقل.');
+            } else if (ram === 'excellent') {
+                adviceList.push('الرامات عندك أكثر من كافية للألعاب، ما تحتاج تزودها.');
             }
             
             if (storage === 'hdd') {
                 adviceList.push('بدل الهارد ديسك: الـ HDD بطيء مرة، روح خذ لك SSD عشان السرعة وتجربة اللعب أحسن بكتير.');
+            } else if (storage === 'nvme') {
+                adviceList.push('التخزين عندك ممتاز، الـ NVMe SSD يعطيك أسرع أوقات تحميل للألعاب.');
             }
             
             // إضافة نصائح عامة
@@ -458,28 +511,43 @@
                 adviceList.push('لو ودك تحسن زيادة، شوف لك باور سبلاي قوي وماركة معروفة.');
             }
             
-            // عرض النتائج
-            document.querySelector('.performance-level').textContent = `مستوى السستم: ${level}`;
-            document.querySelector('.performance-level').className = `performance-level level-${level === 'ضعيف' ? 'weak' : level === 'متوسط' ? 'medium' : level === 'جيد' ? 'good' : level === 'ممتاز' ? 'excellent' : 'ultimate'}`;
-            document.querySelector('.performance-description').textContent = description;
-            
-            // عرض النصائح
-            const adviceListElement = document.getElementById('advice-list');
-            adviceListElement.innerHTML = '';
-            adviceList.forEach(advice => {
-                const li = document.createElement('li');
-                li.innerHTML = `<i class="fas fa-arrow-left icon"></i> ${advice}`;
-                adviceListElement.appendChild(li);
-            });
-            
-            // إظهار مربع النصائح
-            document.getElementById('advice-box').style.display = 'block';
-            
-            // إضافة تأثيرات
-            document.querySelector('.result-container').style.animation = "pulse 0.5s";
+            // محاكاة عملية الفحص لمدة 1.5 ثانية
             setTimeout(() => {
-                document.querySelector('.result-container').style.animation = "";
-            }, 500);
+                // عرض رسالة "تم الفحص!" مع تأثير
+                const notification = document.getElementById('scan-notification');
+                notification.style.display = 'block';
+                
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                    
+                    // عرض النتائج بعد اختفاء الرسالة
+                    document.querySelector('.performance-level').textContent = `مستوى السستم: ${level}`;
+                    document.querySelector('.performance-level').className = `performance-level level-${level === 'ضعيف' ? 'weak' : level === 'متوسط' ? 'medium' : level === 'جيد' ? 'good' : level === 'ممتاز' ? 'excellent' : 'ultimate'}`;
+                    document.querySelector('.performance-description').textContent = description;
+                    
+                    // عرض النصائح
+                    const adviceListElement = document.getElementById('advice-list');
+                    adviceListElement.innerHTML = '';
+                    adviceList.forEach(advice => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<i class="fas fa-arrow-left icon"></i> ${advice}`;
+                        adviceListElement.appendChild(li);
+                    });
+                    
+                    // إظهار مربع النصائح
+                    document.getElementById('advice-box').style.display = 'block';
+                    
+                    // إضافة تأثيرات
+                    document.querySelector('.result-container').style.animation = "pulse 0.5s";
+                    setTimeout(() => {
+                        document.querySelector('.result-container').style.animation = "";
+                    }, 500);
+                    
+                    // إعادة الزر لحالته الأصلية
+                    btn.innerHTML = originalBtnText;
+                    btn.disabled = false;
+                }, 2000);
+            }, 1500);
         });
         
         // إضافة تأثيرات CSS
