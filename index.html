@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فحص قوة جهازك للقيمنق - أبو عساف</title>
+  <title>Cheack Pc</title>
   <style>
     * {
       box-sizing: border-box;
@@ -29,7 +29,7 @@
     
     .container {
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     
@@ -225,35 +225,130 @@
       border-radius: 10px;
       transition: width 1s ease-in-out;
     }
+    
+    .section-title {
+      font-size: 1.4rem;
+      color: #ffcc00;
+      margin: 25px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ffcc00;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>💻 فحص جهازك للقيمنق - أبو عساف 💻</h1>
+    <h1> افحص جهازك </h1>
     
     <div class="card">
+      <div class="section-title">المكونات الأساسية</div>
+      
       <div class="specs-container">
         <div class="spec-group">
           <label>المعالج (CPU):</label>
           <select id="cpu">
             <option value="" selected disabled>-- اختر المعالج --</option>
-            <optgroup label="Intel">
-              <option value="ضعيف">Intel Pentium</option>
-              <option value="ضعيف">Intel i3 4th Gen</option>
-              <option value="متوسط">Intel i5 6th-9th Gen</option>
-              <option value="قوي">Intel i7 10th-12th Gen</option>
-              <option value="قوي جدا">Intel i7 13th-14th Gen</option>
-              <option value="خارق">Intel i9 12th-13th Gen</option>
-              <option value="خارق جدا">Intel i9 14th Gen</option>
+            
+            <optgroup label="Intel Core i3">
+              <option value="ضعيف">Core i3 4th Gen</option>
+              <option value="ضعيف">Core i3 6th Gen</option>
+              <option value="ضعيف">Core i3 8th Gen</option>
+              <option value="ضعيف">Core i3 10th Gen</option>
+              <option value="متوسط">Core i3 12th Gen</option>
+              <option value="متوسط">Core i3 13th Gen</option>
+              <option value="متوسط">Core i3 14th Gen</option>
             </optgroup>
-            <optgroup label="AMD">
-              <option value="ضعيف">Athlon</option>
+            
+            <optgroup label="Intel Core i5">
+              <option value="ضعيف">Core i5 4th Gen</option>
+              <option value="ضعيف">Core i5 6th Gen</option>
+              <option value="متوسط">Core i5 8th Gen</option>
+              <option value="متوسط">Core i5 9th Gen</option>
+              <option value="متوسط">Core i5 10th Gen</option>
+              <option value="قوي">Core i5 11th Gen</option>
+              <option value="قوي">Core i5 12th Gen</option>
+              <option value="قوي جدا">Core i5 13th Gen</option>
+              <option value="قوي جدا">Core i5 14th Gen</option>
+            </optgroup>
+            
+            <optgroup label="Intel Core i7">
+              <option value="متوسط">Core i7 4th Gen</option>
+              <option value="متوسط">Core i7 6th Gen</option>
+              <option value="قوي">Core i7 8th Gen</option>
+              <option value="قوي">Core i7 9th Gen</option>
+              <option value="قوي جدا">Core i7 10th Gen</option>
+              <option value="قوي جدا">Core i7 11th Gen</option>
+              <option value="خارق">Core i7 12th Gen</option>
+              <option value="خارق">Core i7 13th Gen</option>
+              <option value="خارق جدا">Core i7 14th Gen</option>
+            </optgroup>
+            
+            <optgroup label="Intel Core i9">
+              <option value="قوي">Core i9 9th Gen</option>
+              <option value="قوي جدا">Core i9 10th Gen</option>
+              <option value="قوي جدا">Core i9 11th Gen</option>
+              <option value="خارق">Core i9 12th Gen</option>
+              <option value="خارق">Core i9 13th Gen</option>
+              <option value="خارق جدا">Core i9 14th Gen</option>
+              <option value="خارق جدا">Core i9 13900KS</option>
+              <option value="خارق جدا">Core i9 14900K</option>
+            </optgroup>
+            
+            <optgroup label="AMD Ryzen 3">
               <option value="ضعيف">Ryzen 3 1200</option>
+              <option value="ضعيف">Ryzen 3 1300X</option>
+              <option value="ضعيف">Ryzen 3 2200G</option>
+              <option value="ضعيف">Ryzen 3 3100</option>
+              <option value="متوسط">Ryzen 3 3300X</option>
+              <option value="متوسط">Ryzen 3 4100</option>
+              <option value="متوسط">Ryzen 3 4300G</option>
+            </optgroup>
+            
+            <optgroup label="AMD Ryzen 5">
+              <option value="ضعيف">Ryzen 5 1400</option>
+              <option value="متوسط">Ryzen 5 1600</option>
               <option value="متوسط">Ryzen 5 2600</option>
-              <option value="قوي">Ryzen 5 5600X</option>
-              <option value="قوي جدا">Ryzen 7 5800X</option>
-              <option value="خارق">Ryzen 7 7800X3D</option>
+              <option value="متوسط">Ryzen 5 2600X</option>
+              <option value="قوي">Ryzen 5 3600</option>
+              <option value="قوي">Ryzen 5 3600X</option>
+              <option value="قوي جدا">Ryzen 5 5600</option>
+              <option value="قوي جدا">Ryzen 5 5600X</option>
+              <option value="خارق">Ryzen 5 7600</option>
+              <option value="خارق">Ryzen 5 7600X</option>
+            </optgroup>
+            
+            <optgroup label="AMD Ryzen 7">
+              <option value="متوسط">Ryzen 7 1700</option>
+              <option value="متوسط">Ryzen 7 1700X</option>
+              <option value="قوي">Ryzen 7 2700</option>
+              <option value="قوي">Ryzen 7 2700X</option>
+              <option value="قوي جدا">Ryzen 7 3700X</option>
+              <option value="قوي جدا">Ryzen 7 3800X</option>
+              <option value="خارق">Ryzen 7 5700X</option>
+              <option value="خارق">Ryzen 7 5800X</option>
+              <option value="خارق">Ryzen 7 5800X3D</option>
+              <option value="خارق جدا">Ryzen 7 7700</option>
+              <option value="خارق جدا">Ryzen 7 7700X</option>
+              <option value="خارق جدا">Ryzen 7 7800X3D</option>
+            </optgroup>
+            
+            <optgroup label="AMD Ryzen 9">
+              <option value="قوي جدا">Ryzen 9 3900X</option>
+              <option value="خارق">Ryzen 9 3950X</option>
+              <option value="خارق">Ryzen 9 5900X</option>
+              <option value="خارق">Ryzen 9 5950X</option>
+              <option value="خارق جدا">Ryzen 9 7900</option>
+              <option value="خارق جدا">Ryzen 9 7900X</option>
               <option value="خارق جدا">Ryzen 9 7950X</option>
+              <option value="خارق جدا">Ryzen 9 7950X3D</option>
+            </optgroup>
+            
+            <optgroup label="معالجات أخرى">
+              <option value="ضعيف">Intel Pentium Gold</option>
+              <option value="ضعيف">Intel Celeron</option>
+              <option value="ضعيف">AMD Athlon</option>
+              <option value="ضعيف">AMD A-Series</option>
+              <option value="ضعيف">AMD FX-Series</option>
             </optgroup>
           </select>
         </div>
@@ -261,86 +356,195 @@
         <div class="spec-group">
           <label>الرام (RAM):</label>
           <select id="ram">
-            <option value="" selected disabled>-- اختر كمية الذاكرة --</option>
+            <option value="" selected disabled>-- اختر حجم الذاكرة --</option>
             <option value="ضعيف">4GB DDR3</option>
             <option value="ضعيف">8GB DDR3</option>
             <option value="متوسط">8GB DDR4</option>
-            <option value="قوي">16GB DDR4</option>
-            <option value="قوي جدا">16GB DDR5</option>
-            <option value="خارق">32GB DDR4</option>
-            <option value="خارق جدا">32GB DDR5</option>
-            <option value="خارق جدا">64GB DDR5</option>
+            <option value="متوسط">8GB DDR4 3200MHz</option>
+            <option value="قوي">16GB DDR4 2666MHz</option>
+            <option value="قوي">16GB DDR4 3200MHz</option>
+            <option value="قوي جدا">16GB DDR5 4800MHz</option>
+            <option value="قوي جدا">16GB DDR5 5600MHz</option>
+            <option value="خارق">32GB DDR4 3200MHz</option>
+            <option value="خارق">32GB DDR4 3600MHz</option>
+            <option value="خارق جدا">32GB DDR5 5600MHz</option>
+            <option value="خارق جدا">32GB DDR5 6000MHz</option>
+            <option value="خارق جدا">64GB DDR4 3200MHz</option>
+            <option value="خارق جدا">64GB DDR5 5600MHz</option>
+            <option value="خارق جدا">64GB DDR5 6000MHz</option>
+            <option value="خارق جدا">128GB DDR5 5600MHz</option>
           </select>
         </div>
       </div>
       
-      <label>كرت الشاشة (GPU):</label>
-      <select id="gpu">
-        <option value="" selected disabled>-- اختر كرت الشاشة --</option>
-        <optgroup label="NVIDIA GeForce">
-          <option value="ضعيف">GT 1030</option>
-          <option value="ضعيف">GTX 1050</option>
-          <option value="ضعيف">GTX 1050 Ti</option>
-          <option value="ضعيف">GTX 1650</option>
-          <option value="متوسط">GTX 1060</option>
-          <option value="متوسط">GTX 1660</option>
-          <option value="متوسط">GTX 1660 Super</option>
-          <option value="متوسط">GTX 1660 Ti</option>
-          <option value="قوي">RTX 2060</option>
-          <option value="قوي">RTX 2060 Super</option>
-          <option value="قوي جدا">RTX 3060</option>
-          <option value="قوي جدا">RTX 3060 Ti</option>
-          <option value="خارق">RTX 3070</option>
-          <option value="خارق">RTX 3070 Ti</option>
-          <option value="خارق">RTX 3080</option>
-          <option value="خارق جدا">RTX 3080 Ti</option>
-          <option value="خارق جدا">RTX 3090</option>
-          <option value="خارق جدا">RTX 3090 Ti</option>
-          <option value="خارق جدا">RTX 4070</option>
-          <option value="خارق جدا">RTX 4070 Super</option>
-          <option value="خارق جدا">RTX 4070 Ti</option>
-          <option value="خارق جدا">RTX 4070 Ti Super</option>
-          <option value="خارق جدا">RTX 4080</option>
-          <option value="خارق جدا">RTX 4080 Super</option>
-          <option value="خارق جدا">RTX 4090</option>
-          <option value="خارق جدا">RTX 5090 (قريباً)</option>
-        </optgroup>
-        <optgroup label="AMD Radeon">
-          <option value="ضعيف">RX 550</option>
-          <option value="ضعيف">RX 560</option>
-          <option value="ضعيف">RX 570</option>
-          <option value="متوسط">RX 580</option>
-          <option value="متوسط">RX 5500 XT</option>
-          <option value="متوسط">RX 5600 XT</option>
-          <option value="قوي">RX 5700 XT</option>
-          <option value="قوي">RX 6600</option>
-          <option value="قوي جدا">RX 6600 XT</option>
-          <option value="قوي جدا">RX 6700 XT</option>
-          <option value="خارق">RX 6800</option>
-          <option value="خارق">RX 6800 XT</option>
-          <option value="خارق جدا">RX 6900 XT</option>
-          <option value="خارق جدا">RX 6950 XT</option>
-          <option value="خارق جدا">RX 7600</option>
-          <option value="خارق جدا">RX 7700 XT</option>
-          <option value="خارق جدا">RX 7800 XT</option>
-          <option value="خارق جدا">RX 7900 XT</option>
-          <option value="خارق جدا">RX 7900 XTX</option>
-        </optgroup>
-      </select>
+      <div class="section-title">كرت الشاشة (GPU)</div>
       
-      <label>نوع التبريد:</label>
-      <div class="cooling-options">
-        <div class="cooling-option">
-          <input type="radio" id="air-cooling" name="cooling" value="هوائي">
-          <label for="air-cooling">تبريد هوائي</label>
+      <div class="specs-container">
+        <div class="spec-group">
+          <label>كرت الشاشة (GPU):</label>
+          <select id="gpu">
+            <option value="" selected disabled>-- اختر كرت الشاشة --</option>
+            
+            <optgroup label="NVIDIA GeForce GTX">
+              <option value="ضعيف">GTX 1050</option>
+              <option value="ضعيف">GTX 1050 Ti</option>
+              <option value="ضعيف">GTX 1060 3GB</option>
+              <option value="متوسط">GTX 1060 6GB</option>
+              <option value="متوسط">GTX 1070</option>
+              <option value="متوسط">GTX 1070 Ti</option>
+              <option value="متوسط">GTX 1080</option>
+              <option value="متوسط">GTX 1080 Ti</option>
+              <option value="متوسط">GTX 1650</option>
+              <option value="متوسط">GTX 1650 Super</option>
+              <option value="متوسط">GTX 1660</option>
+              <option value="متوسط">GTX 1660 Super</option>
+              <option value="متوسط">GTX 1660 Ti</option>
+            </optgroup>
+            
+            <optgroup label="NVIDIA GeForce RTX 20 Series">
+              <option value="متوسط">RTX 2060</option>
+              <option value="متوسط">RTX 2060 Super</option>
+              <option value="قوي">RTX 2070</option>
+              <option value="قوي">RTX 2070 Super</option>
+              <option value="قوي جدا">RTX 2080</option>
+              <option value="قوي جدا">RTX 2080 Super</option>
+              <option value="قوي جدا">RTX 2080 Ti</option>
+            </optgroup>
+            
+            <optgroup label="NVIDIA GeForce RTX 30 Series">
+              <option value="قوي">RTX 3060</option>
+              <option value="قوي">RTX 3060 Ti</option>
+              <option value="قوي جدا">RTX 3070</option>
+              <option value="قوي جدا">RTX 3070 Ti</option>
+              <option value="خارق">RTX 3080</option>
+              <option value="خارق">RTX 3080 Ti</option>
+              <option value="خارق جدا">RTX 3090</option>
+              <option value="خارق جدا">RTX 3090 Ti</option>
+            </optgroup>
+            
+            <optgroup label="NVIDIA GeForce RTX 40 Series">
+              <option value="قوي جدا">RTX 4060</option>
+              <option value="قوي جدا">RTX 4060 Ti</option>
+              <option value="خارق">RTX 4070</option>
+              <option value="خارق">RTX 4070 Super</option>
+              <option value="خارق">RTX 4070 Ti</option>
+              <option value="خارق جدا">RTX 4080</option>
+              <option value="خارق جدا">RTX 4080 Super</option>
+              <option value="خارق جدا">RTX 4090</option>
+              <option value="خارق جدا">RTX 4090 D</option>
+            </optgroup>
+            
+            <optgroup label="NVIDIA GeForce RTX 50 Series (قريباً)">
+              <option value="خارق جدا">RTX 5080</option>
+              <option value="خارق جدا">RTX 5090</option>
+            </optgroup>
+            
+            <optgroup label="AMD Radeon RX 5000 Series">
+              <option value="ضعيف">RX 5500</option>
+              <option value="متوسط">RX 5500 XT</option>
+              <option value="متوسط">RX 5600</option>
+              <option value="متوسط">RX 5600 XT</option>
+              <option value="قوي">RX 5700</option>
+              <option value="قوي">RX 5700 XT</option>
+            </optgroup>
+            
+            <optgroup label="AMD Radeon RX 6000 Series">
+              <option value="متوسط">RX 6600</option>
+              <option value="متوسط">RX 6600 XT</option>
+              <option value="قوي">RX 6700 XT</option>
+              <option value="قوي جدا">RX 6800</option>
+              <option value="قوي جدا">RX 6800 XT</option>
+              <option value="خارق">RX 6900 XT</option>
+              <option value="خارق">RX 6950 XT</option>
+            </optgroup>
+            
+            <optgroup label="AMD Radeon RX 7000 Series">
+              <option value="قوي جدا">RX 7600</option>
+              <option value="قوي جدا">RX 7600 XT</option>
+              <option value="خارق">RX 7700 XT</option>
+              <option value="خارق">RX 7800 XT</option>
+              <option value="خارق جدا">RX 7900 GRE</option>
+              <option value="خارق جدا">RX 7900 XT</option>
+              <option value="خارق جدا">RX 7900 XTX</option>
+            </optgroup>
+            
+            <optgroup label="كروت شاشة أخرى">
+              <option value="ضعيف">NVIDIA GT 1030</option>
+              <option value="ضعيف">NVIDIA GTX 1630</option>
+              <option value="ضعيف">AMD RX 6400</option>
+              <option value="ضعيف">AMD RX 6500 XT</option>
+              <option value="ضعيف">Intel Arc A380</option>
+              <option value="متوسط">Intel Arc A750</option>
+              <option value="قوي">Intel Arc A770</option>
+            </optgroup>
+          </select>
         </div>
-        <div class="cooling-option">
-          <input type="radio" id="liquid-cooling" name="cooling" value="مائي">
-          <label for="liquid-cooling">تبريد مائي</label>
+        
+        <div class="spec-group">
+          <label>مزود الطاقة (Power Supply):</label>
+          <select id="psu">
+            <option value="" selected disabled>-- اختر مزود الطاقة --</option>
+            <option value="ضعيف">500W أو أقل (غير كافٍ للألعاب)</option>
+            <option value="متوسط">600W - 700W (مناسب للأجهزة المتوسطة)</option>
+            <option value="قوي">750W - 850W (جيد للأجهزة القوية)</option>
+            <option value="قوي جدا">900W - 1000W (ممتاز للأجهزة الخارقة)</option>
+            <option value="خارق">1200W أو أكثر (مخصص للأجهزة خارقة القوة)</option>
+          </select>
         </div>
       </div>
       
-      <button onclick="checkPerformance()">🚀 افحص جهازي 🚀</button>
+      <div class="section-title">قطع إضافية</div>
+      
+      <div class="specs-container">
+        <div class="spec-group">
+          <label>اللوحة الأم (Motherboard):</label>
+          <select id="motherboard">
+            <option value="" selected disabled>-- اختر اللوحة الأم --</option>
+            
+            <optgroup label="لوحات Intel الأساسية">
+              <option value="ضعيف">H310 / H410</option>
+              <option value="ضعيف">B360 / B365</option>
+              <option value="متوسط">B460 / B560</option>
+              <option value="متوسط">H470 / H570</option>
+              <option value="قوي">Z390 / Z490</option>
+              <option value="قوي جدا">Z590 / Z690</option>
+              <option value="خارق">Z790 / Z790 MAXIMUS</option>
+            </optgroup>
+            
+            <optgroup label="لوحات AMD الأساسية">
+              <option value="ضعيف">A320 / A420</option>
+              <option value="متوسط">B350 / B450</option>
+              <option value="قوي">B550 / B650</option>
+              <option value="قوي جدا">X370 / X470</option>
+              <option value="خارق">X570 / X670</option>
+              <option value="خارق جدا">X670E / X670E Taichi</option>
+            </optgroup>
+            
+            <optgroup label="لوحات مخصصة للقيمنق">
+              <option value="قوي">ASUS ROG Strix B550-F</option>
+              <option value="قوي جدا">MSI MPG Z590 Gaming Carbon</option>
+              <option value="خارق">Gigabyte X570S AORUS Master</option>
+              <option value="خارق جدا">ASUS ROG Maximus Z790 Hero</option>
+            </optgroup>
+          </select>
+        </div>
+        
+        <div class="spec-group">
+          <label>نوع التبريد:</label>
+          <div class="cooling-options">
+            <div class="cooling-option">
+              <input type="radio" id="air-cooling" name="cooling" value="هوائي">
+              <label for="air-cooling">تبريد هوائي</label>
+            </div>
+            <div class="cooling-option">
+              <input type="radio" id="liquid-cooling" name="cooling" value="مائي">
+              <label for="liquid-cooling">تبريد مائي</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button onclick="checkPerformance()"> افحص جهازي </button>
       
       <div class="performance-bar">
         <div id="performance-fill" class="performance-fill" style="width: 0%; background: linear-gradient(90deg, #ff0000, #00ff00);"></div>
@@ -351,7 +555,8 @@
     </div>
     
     <footer>
-      ⚡ تصميم وبرمجة: أبو عساف ⚡
+      
+      ⚡Hz Bahkali تصميم وبرمجة: أبو عساف ⚡
     </footer>
   </div>
 
@@ -360,13 +565,15 @@
       let cpu = document.getElementById("cpu").value;
       let gpu = document.getElementById("gpu").value;
       let ram = document.getElementById("ram").value;
+      let psu = document.getElementById("psu").value;
+      let motherboard = document.getElementById("motherboard").value;
       
       // الحصول على نوع التبريد
       let coolingType = document.querySelector('input[name="cooling"]:checked');
       let cooling = coolingType ? coolingType.value : "هوائي";
       
       // التحقق من أن المستخدم اختار جميع الخيارات
-      if (!cpu || !gpu || !ram || !coolingType) {
+      if (!cpu || !gpu || !ram || !psu || !motherboard || !coolingType) {
         alert("يرجى اختيار جميع المكونات ونوع التبريد أولاً!");
         return;
       }
@@ -380,7 +587,7 @@
         "خارق جدا": 6 
       };
       
-      let total = values[cpu] + values[gpu] + values[ram];
+      let total = values[cpu] + values[gpu] + values[ram] + values[psu] + values[motherboard];
       
       // إضافة نقطة إضافية إذا كان التبريد مائي
       if (cooling === "مائي") {
@@ -394,7 +601,7 @@
       games.innerHTML = "";
       
       // حساب النسبة المئوية للأداء
-      let maxTotal = 18; // أقصى قيمة ممكنة (6+6+6)
+      let maxTotal = 30; // أقصى قيمة ممكنة (6+6+6+6+6)
       let performancePercent = (total / maxTotal) * 100;
       
       // تحديث شريط الأداء
@@ -411,21 +618,21 @@
         performanceFill.style.background = "linear-gradient(90deg, #9acd32, #00ff00)";
       }
 
-      if (total <= 5) {
+      if (total <= 10) {
         result.style.background = "rgba(255,0,0,0.3)";
         result.innerHTML = "🔥 جهازك ضعيف للألعاب الحديثة! 🔥<br>نصيحة: طور كرت الشاشة وزود الرام على الأقل 16GB";
         games.innerHTML = "✅ الألعاب المدعومة: الألعاب القديمة وبعض الألعاب الخفيفة على إعدادات منخفضة";
-      } else if (total <= 8) {
+      } else if (total <= 15) {
         result.style.background = "rgba(255,165,0,0.3)";
         result.innerHTML = "⚡ جهازك متوسط، يشغل أغلب الألعاب بجودة متوسطة. ⚡<br>نصيحة: فكر في ترقية المعالج أو GPU";
         games.innerHTML = "✅ الألعاب المدعومة: GTA V, Fortnite, CS:GO, Valorant (جودة متوسطة)";
-      } else if (total <= 12) {
+      } else if (total <= 20) {
         result.style.background = "rgba(0,255,0,0.3)";
         result.innerHTML = "✅ جهازك قوي ويشغل الألعاب بجودة عالية ✅<br>نصيحة: لا تحتاج ترقية حالياً إلا إذا تبي 4K/VR";
         games.innerHTML = "✅ الألعاب المدعومة: GTA V, Warzone, Apex, Cyberpunk 2077 (1080p/1440p)";
-      } else if (total <= 16) {
+      } else if (total <= 25) {
         result.style.background = "rgba(0,150,255,0.3)";
-        result.innerHTML = "🚀 جهازك خارق، جاهز لأي لعبة على Ultra Settings و 2K/4K! 🚀";
+        result.innerHTML = "🚀 جهازك خارق، جاهز لأي لعبة على Ultra Settings و 2K/4K! �";
         games.innerHTML = "🔥 الألعاب المدعومة: جميع الألعاب الحديثة مثل Cyberpunk 2077, Starfield, Warzone على إعدادات عالية";
       } else {
         result.style.background = "rgba(148,0,211,0.3)";
