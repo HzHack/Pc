@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cheack Pc</title>
+  <!-- رابط Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -93,6 +95,65 @@
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
     }
     
+    /* تصميم جديد لقسم التواصل الاجتماعي */
+    .social-section {
+      margin: 25px 0;
+      padding: 15px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #4fd1c5;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      width: 80px;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .social-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-label {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    
+    /* بقية الأنماط */
     .container {
       width: 100%;
       max-width: 900px;
@@ -307,44 +368,43 @@
   <!-- رسالة الترحيب -->
   <div class="welcome-overlay" id="welcomeOverlay">
     <div class="welcome-box">
-      <h2>ارحب نور الموقع فيك!</h2>
+      <h2>أهلاً بك في موقعنا!</h2>
       <p>تم تطوير الموقع بالكامل لعيون (Levi♥️)</p>
-        <footer>
-    <div class="footer-content">
+      
+      <!-- قسم التواصل الاجتماعي مع الأيقونات -->
       <div class="social-section">
-        <h3 class="social-title">تواصل معنا</h3>
+        <h3 class="social-title">تابعنا على وسائل التواصل</h3>
         <div class="social-links">
           <a href="https://www.instagram.com/sww_p" target="_blank" class="social-link">
             <div class="social-icon">
-              <i class="fab fa-instagram" style="color: #e1306c;"></i>
+              <i class="fab fa-instagram"></i>
             </div>
             <span class="social-label">إنستغرام</span>
           </a>
           
           <a href="https://www.snapchat.com/add/sww_p" target="_blank" class="social-link">
             <div class="social-icon">
-              <i class="fab fa-snapchat-ghost" style="color: #fffc00;"></i>
+              <i class="fab fa-snapchat-ghost"></i>
             </div>
             <span class="social-label">سناب شات</span>
           </a>
           
           <a href="https://twitter.com/sww_p" target="_blank" class="social-link">
             <div class="social-icon">
-              <i class="fab fa-twitter" style="color: #1da1f2;"></i>
+              <i class="fab fa-twitter"></i>
             </div>
             <span class="social-label">تويتر</span>
           </a>
           
           <a href="https://t.me/sww_p" target="_blank" class="social-link">
             <div class="social-icon">
-              <i class="fab fa-telegram" style="color: #0088cc;"></i>
+              <i class="fab fa-telegram"></i>
             </div>
             <span class="social-label">تليجرام</span>
           </a>
         </div>
       </div>
-    </div>
-        </footer>
+      
       <button class="welcome-btn" onclick="hideWelcome()">موافق</button>
     </div>
   </div>
@@ -668,7 +728,6 @@
     </div>
     
     <footer>
-      
       ⚡Hz Bahkali تصميم وبرمجة: أبو عساف ⚡
     </footer>
   </div> 
@@ -754,7 +813,7 @@
         games.innerHTML = "✅ الألعاب المدعومة: الألعاب القديمة وبعض الألعاب الخفيفة على إعدادات منخفضة";
       } else if (total <= 15) {
         result.style.background = "rgba(255,165,0,0.3)";
-        result.innerHTML = "⚡ جهازك متوسط، يشغل أغلب الألعاب بجودة متوسطة. ⚡<br>نصيحة: فكر في ترقية المعالج أو GPU";
+        result.innerHTML = "⚡ جهazك متوسط، يشغل أغلب الألعاب بجودة متوسطة. ⚡<br>نصيحة: فكر في ترقية المعالج أو GPU";
         games.innerHTML = "✅ الألعاب المدعومة: GTA V, Fortnite, CS:GO, Valorant (جودة متوسطة)";
       } else if (total <= 20) {
         result.style.background = "rgba(0,255,0,0.3)";
